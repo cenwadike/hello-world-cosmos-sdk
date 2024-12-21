@@ -1,0 +1,17 @@
+syntax = "proto3";
+package igniteexample.igniteexample;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "igniteexample/igniteexample/params.proto";
+
+option go_package = "ignite-example/x/igniteexample/types";
+
+// GenesisState defines the igniteexample module's genesis state.
+message GenesisState {
+  // params defines all the parameters of the module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}

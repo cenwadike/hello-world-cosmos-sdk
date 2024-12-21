@@ -1,0 +1,15 @@
+syntax = "proto3";
+package igniteexample.igniteexample;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+
+option go_package = "ignite-example/x/igniteexample/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (amino.name) = "igniteexample/x/igniteexample/Params";
+  option (gogoproto.equal) = true;
+
+  
+}
